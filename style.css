@@ -1,3 +1,272 @@
-h1 {
-  color: blue;
+* {
+	margin: 0;
+	box-sizing: border-box;
 }
+
+html, body {
+	font-size: 100%;
+}
+body {
+	font-family: 'Montserrat', sans-serif;
+	line-height: 1.5em;
+	background: url("images/dark-noise.png");
+}
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1.2em;
+	letter-spacing: 2px;
+}
+
+.main-container {
+	background: url("images/light-noise.png");
+	margin: 3em auto;
+	width: 80%;
+	max-width: 800px;
+	position: relative;
+	padding: 1.5em;
+	border: 1px solid #f5f5f5;
+	box-shadow: inset 0 -1px 0 0 rgba(255,255,255,0.5),
+		    						0 -4px 3px -2px rgba(0,0,0,0.2),
+										0 4px 3px -2px rgba(0,0,0,0.2),
+		    						0 -1px 1px 0 rgba(0,0,0,.2);
+}
+.main-container:before, .main-container:after {
+	content: "";
+	background: url("images/light-noise.png");
+	position: absolute;
+	left: -3px;
+	top: -3px;
+	border: 1px solid #f5f5f5;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	box-shadow: 0 -7px 1px -3px rgba(0,0,0,.1),
+		    			0 -1px 1px 0 rgba(0,0,0,.2);
+	transform: rotate(-0.9deg);
+	transition: transform 1s;
+}
+.main-container:after {
+	top: -2px;
+	transform: rotate(2deg);
+}
+.main-container:hover:before {
+	transform: rotate(-1.7deg);
+	transition: transform 1s;
+}
+.main-container:hover:after {
+	transform: rotate(3deg);
+	transition: transform 1s;
+}
+
+hr {
+	border: 0;
+	 height: 1px;
+	 background-image: linear-gradient(to right,
+											rgba(0, 0, 0, 0),
+									 		rgba(0, 0, 0, 0.75),
+									 		rgba(0, 0, 0, 0));
+}
+.heading {
+	margin-bottom: 2.75em;
+	max-width: 63%;
+}
+.heading h1 {
+	color: #3a4049;
+	font-size: 2em;
+	margin-bottom: 1rem;
+}
+.heading p:first-of-type {
+	font-size: 0.9rem;
+	margin-bottom: 1rem;
+}
+.heading p:last-of-type {
+	font-size: 1.1rem;
+}
+.container h2 {
+	margin-bottom: 1.25rem;
+}
+.item p {
+	font-weight: bold;
+	color: #5b5b5b;
+	margin-bottom: 0.25em;
+}
+.item ul {
+	margin-bottom: 2.5rem;
+}
+.item h3 span {
+	float: right;
+	margin-right: 3em;
+}
+hr {
+	margin: 1rem;
+}
+span {
+	color: #6082b2;
+}
+
+.picture-container {
+	position: absolute;
+	z-index: 5;
+	top: 80px;
+	right: 40px;
+	width: 225px;
+	max-width: 30%;
+	max-height: auto;
+	height: 225px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0px 9px 17px 4px rgba(0,0,0,0.5);
+	transform: rotate(8deg);
+}
+.picture-container img {
+	width: 90%;
+	height: 90%;
+	filter: grayscale(30%);
+}
+
+.tape {
+	background-color: rgba(255, 255, 255, 0.3);
+	box-shadow: inset 0 0 16px 8px rgba(255, 255, 255, 0.2);
+	height: 50px;
+	position: absolute;
+	top: -20px;
+	right: 40px;
+	transform: rotate(4deg);
+	width: 150px;
+	filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.3));
+}
+.tape:before,
+.tape:after {
+	background-size: 7px 7px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	content: "";
+	width: 3px;
+}
+.tape:after {
+  background-image: linear-gradient(45deg, transparent 50%, rgba(255, 255, 255, 0.4) 50%),
+                    linear-gradient(-45deg, transparent 50%, rgba(255, 255, 255, 0.4) 50%);
+  background-position: 0 100%;
+  left: -.3px;
+}
+.tape:before {
+  background-image: linear-gradient(135deg, transparent 50%, rgba(255, 255, 255, 0.4) 50%),
+                    linear-gradient(-135deg, transparent 50%, rgba(255, 255, 255, 0.4) 50%);
+  background-position: 0 100%;
+  right: -.3px;
+}
+
+.tape2 {
+	background-color: rgba(255, 255, 255, 0.3);
+	box-shadow: inset 0 0 16px 8px rgba(255, 255, 255, 0.2);
+	height: 50px;
+	position: absolute;
+	top: 20px;
+	left: 37%;
+	transform: rotate(4deg);
+	width: 200px;
+	filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.3));
+}
+.tape2:before,
+.tape2:after {
+	background-size: 7px 7px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	content: "";
+	width: 3px;
+}
+.tape2:after {
+  background-image: linear-gradient(45deg, transparent 50%, rgba(255, 255, 255, 0.4) 50%),
+                    linear-gradient(-45deg, transparent 50%, rgba(255, 255, 255, 0.4) 50%);
+  background-position: 0 100%;
+  left: -.3px;
+}
+.tape2:before {
+  background-image: linear-gradient(135deg, transparent 50%, rgba(255, 255, 255, 0.4) 50%),
+                    linear-gradient(-135deg, transparent 50%, rgba(255, 255, 255, 0.4) 50%);
+  background-position: 0 100%;
+  right: -.3px;
+}
+.tape2 p {
+	font-family: 'Permanent Marker', cursive;
+	font-size: 1.25em;
+	letter-spacing: 2px;
+	margin: 0.1em auto;
+	text-align: center;
+	opacity: 0.65;
+}
+
+.word .show {
+  animation: fade-in 2000ms ease 1 forwards;
+}
+.word span {
+	opacity: 0;
+	color: #3a4049;
+  text-transform: uppercase;
+  font-size: 1em;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 750px) {
+	body {
+		font-size: 12px;
+	}
+	.picture-container {
+		width: 150px;
+		max-width: 30%;
+		max-height: auto;
+		height: 150px;
+		right: 20px;
+	}
+	.tape {
+		height: 40px;
+		width: 120px;
+		right: 20px;
+	}
+	.tape2 {
+		height: 40px;
+		width: 150px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.picture-container {
+		width: 125px;
+		height: 125px;
+		right: 15px;
+	}
+	.tape {
+		height: 30px;
+		width: 90px;
+		right: 20px;
+		top: -15px;
+	}
+	.tape2 {
+		height: 40px;
+		width: 150px;
+		left: 50%;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	body {
+		font-size: 11px;
+	}
+	.picture-container {
+		visibility: hidden;
+	}
+	.main-container div:first-of-type {
+		max-width: 100%;
+	}
+}
+
