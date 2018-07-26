@@ -8,7 +8,7 @@ html, body {
 body {
 	font-family: 'Montserrat', sans-serif;
 	line-height: 1.5em;
-	background: url("images/dark-noise.png");
+	background: url("dark-noise.png");
 }
 h1, h2, h3, h4, h5, h6 {
 	line-height: 1.2em;
@@ -16,7 +16,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .main-container {
-	background: url("images/light-noise.png");
+	background: url("light-noise.png");
 	margin: 3em auto;
 	width: 80%;
 	max-width: 800px;
@@ -30,7 +30,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .main-container:before, .main-container:after {
 	content: "";
-	background: url("images/light-noise.png");
+	background: url("light-noise.png");
 	position: absolute;
 	left: -3px;
 	top: -3px;
